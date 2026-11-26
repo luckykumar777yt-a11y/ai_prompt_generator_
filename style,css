@@ -1,0 +1,292 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #080f20;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 20px 0 35px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #42a5ff;
+}
+
+.tagline {
+    color: #9caac0;
+    margin-top: 8px;
+}
+
+/* Introduction */
+
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.intro h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #ffffff, #42a5ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro p {
+    color: #9caac0;
+}
+
+/* Main workspace */
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.input-section,
+.output-section {
+    background: #111c32;
+    border: 1px solid #263753;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #9caac0;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Form */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    color: #dce8fa;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    background: #0a1428;
+    border: 1px solid #344762;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #42a5ff;
+    box-shadow: 0 0 0 2px rgba(66, 165, 255, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #71819a;
+}
+
+select option {
+    background: #111c32;
+}
+
+/* Buttons */
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.generate-btn {
+    flex: 1;
+    background: #2788ed;
+    color: white;
+}
+
+.generate-btn:hover {
+    background: #086bd0;
+    transform: translateY(-2px);
+}
+
+.clear-btn {
+    background: #263753;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #3a4d6b;
+}
+
+/* Output */
+
+.output-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    font-size: 11px;
+    color: #53d9a0;
+    background: #153c36;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.output-box {
+    min-height: 280px;
+    background: #0a1428;
+    border: 1px solid #344762;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 20px 0;
+    color: #dce8fa;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.placeholder {
+    color: #71819a;
+}
+
+.copy-btn {
+    width: 100%;
+    background: #153c36;
+    color: #53d9a0;
+}
+
+.copy-btn:hover {
+    background: #20594c;
+}
+
+/* Sample prompt */
+
+.sample-box {
+    margin-top: 25px;
+    padding: 18px;
+    background: #182943;
+    border: 1px solid #344762;
+    border-radius: 10px;
+}
+
+.sample-box h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #77bdff;
+}
+
+.sample-box p {
+    font-size: 13px;
+    color: #bdcce0;
+    line-height: 1.7;
+}
+
+.sample-btn {
+    margin-top: 15px;
+    background: #263753;
+    color: white;
+}
+
+.sample-btn:hover {
+    background: #2788ed;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: #71819a;
+    font-size: 13px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h1 {
+        font-size: 29px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .input-section,
+    .output-section {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+}
