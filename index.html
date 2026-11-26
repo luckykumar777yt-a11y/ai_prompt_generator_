@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">✦ PROMPT<span>GEN</span></div>
+            <p class="tagline">Create smarter prompts. Get better AI results.</p>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h1>AI Prompt Generator</h1>
+                <p>Build clear, effective AI prompts in seconds.</p>
+            </section>
+
+            <div class="workspace">
+
+                <section class="input-section">
+                    <h2>Build Your Prompt</h2>
+                    <p class="section-description">
+                        Fill in the details below to create your prompt.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="role">Your Role</label>
+                        <input type="text" id="role"
+                            placeholder="e.g. Professional Web Developer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task">Task</label>
+                        <textarea id="task" rows="3"
+                            placeholder="What do you want the AI to do?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="context">Context</label>
+                        <textarea id="context" rows="3"
+                            placeholder="Provide background information..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="constraints">Constraints</label>
+                        <textarea id="constraints" rows="3"
+                            placeholder="Mention rules, limitations or requirements..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="format">Output Format</label>
+                        <select id="format">
+                            <option value="">Select output format</option>
+                            <option value="Bullet Points">Bullet Points</option>
+                            <option value="Paragraph">Paragraph</option>
+                            <option value="Step-by-Step Guide">Step-by-Step Guide</option>
+                            <option value="Table">Table</option>
+                            <option value="Code">Code</option>
+                            <option value="Detailed Explanation">Detailed Explanation</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="generate-btn" onclick="generatePrompt()">
+                            ✦ Generate Prompt
+                        </button>
+                        <button class="clear-btn" onclick="clearFields()">
+                            Clear
+                        </button>
+                    </div>
+                </section>
+
+                <section class="output-section">
+                    <div class="output-heading">
+                        <h2>Generated Prompt</h2>
+                        <span class="status">READY</span>
+                    </div>
+
+                    <div class="output-box" id="output">
+                        <p class="placeholder">
+                            Your generated prompt will appear here...
+                        </p>
+                    </div>
+
+                    <button class="copy-btn" onclick="copyPrompt()">
+                        ⧉ Copy Prompt
+                    </button>
+
+                    <div class="sample-box">
+                        <h3>💡 Sample Prompt</h3>
+                        <p>
+                            Act as a professional web developer.
+                            Create a modern portfolio website using HTML,
+                            CSS and JavaScript. Make it responsive,
+                            beginner-friendly and visually attractive.
+                            Present the complete code with explanations.
+                        </p>
+                        <button class="sample-btn" onclick="loadSample()">
+                            Use Sample
+                        </button>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 PromptGen | Designed for Smarter AI Prompts ✦</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
